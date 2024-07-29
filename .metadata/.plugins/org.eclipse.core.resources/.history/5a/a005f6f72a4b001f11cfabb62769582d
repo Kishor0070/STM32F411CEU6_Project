@@ -1,0 +1,28 @@
+/*
+ * task100_pou.c
+ *
+ *  Created on: Jul 23, 2024
+ *      Author: bhadula.kishor
+ */
+#include "task100.h"
+#include <stdint.h>
+
+volatile uint8_t task100Counter = 1;
+volatile uint8_t txData[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+void transmit_over_usart2(void){
+
+}
+
+void receive_over_usart1(void){
+
+}
+
+void utility_t100(void){
+	task100Counter++;
+	if(task100Counter > 10){
+		task100Counter = 1;
+	}
+
+}
+

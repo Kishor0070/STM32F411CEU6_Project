@@ -1,0 +1,12 @@
+/*
+ * task100_pou.c
+ *
+ *  Created on: Jul 23, 2024
+ *      Author: bhadula.kishor
+ */
+#include "task100.h"
+
+void transmit_over_usart2(void){
+
+}
+

@@ -1,0 +1,26 @@
+/*
+ * app_header.h
+ *
+ *  Created on: Jul 24, 2024
+ *      Author: bhadula.kishor
+ */
+
+#ifndef APP_HEADER_H_
+#define APP_HEADER_H_
+
+#include <stdint.h>
+#include <stdbool.h>
+
+typedef struct{
+	volatile bool isReadyToTransmit;
+	volatile bool isReadyToReceive;
+	volatile uint8_t occupiedSize;
+	volatile char txBuffer[20];
+	volatile char rxBuffer[20];
+
+} USART_BUFFER;
+
+
+
+
+#endif /* APP_HEADER_H_ */

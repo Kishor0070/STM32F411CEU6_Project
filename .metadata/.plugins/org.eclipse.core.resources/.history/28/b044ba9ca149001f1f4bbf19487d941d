@@ -1,0 +1,23 @@
+/*
+ * usart_lib.h
+ *
+ *  Created on: Jul 24, 2024
+ *      Author: bhadula.kishor
+ */
+
+#ifndef USART_LIB_H_
+#define USART_LIB_H_
+
+#include "app_header.h"
+#include "stm32f411xe.h"
+#include <stdbool.h>
+
+volatile USART_BUFFER *usart1_buf = NULL; // To be allocated when initializing the peripheral
+volatile USART_BUFFER *usart2_buf = NULL; // To be allocated when initializing the peripheral
+volatile USART_BUFFER *usart6_buf = NULL; // To be allocated when initializing the peripheral
+
+
+void usartx_init(USART_TypeDef *usart);
+bool transmit_frame(USART_TypeDef *usart, USART_BUFFER *buffer);
+
+#endif /* USART_LIB_H_ */

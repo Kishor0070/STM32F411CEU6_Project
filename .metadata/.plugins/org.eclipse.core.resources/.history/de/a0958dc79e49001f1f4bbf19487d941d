@@ -1,0 +1,18 @@
+/*
+ * app_header.h
+ *
+ *  Created on: Jul 24, 2024
+ *      Author: bhadula.kishor
+ */
+
+#ifndef APP_HEADER_H_
+#define APP_HEADER_H_
+
+
+
+typedef struct{
+	volatile char txBuffer[100];
+	volatile char rxBuffer[100];
+} USART_BUFFER;
+
+#endif /* APP_HEADER_H_ */

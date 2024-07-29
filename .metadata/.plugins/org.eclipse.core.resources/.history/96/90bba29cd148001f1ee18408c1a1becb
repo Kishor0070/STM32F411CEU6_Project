@@ -1,0 +1,17 @@
+/*
+ * task50.h
+ *
+ *  Created on: Jul 23, 2024
+ *      Author: bhadula.kishor
+ */
+
+#ifndef TASK50_H_
+#define TASK50_H_
+
+#include <stdint.h>
+
+volatile uint8_t task50Counter = 1;
+
+void blinkLed500ms(void);
+
+#endif /* TASK50_H_ */

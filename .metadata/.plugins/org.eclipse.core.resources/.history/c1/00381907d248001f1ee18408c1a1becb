@@ -1,0 +1,29 @@
+#include "stm32f411xe.h"
+#include "task50.h"
+
+
+
+
+
+void blinkLed500ms(void){
+
+}
+
+void utility(void){
+	task50Counter++; // Goes till 1 second and configurable
+
+
+	if(task50Counter>20){
+		task50Counter = 1;
+	}
+
+	if(task50Counter <= 10){
+		blink500ms = true;
+	}else{
+		blink500ms = false;
+	}
+	if(task50Counter == 20){
+		blink100ms = ~blink1000ms;
+	}
+
+}

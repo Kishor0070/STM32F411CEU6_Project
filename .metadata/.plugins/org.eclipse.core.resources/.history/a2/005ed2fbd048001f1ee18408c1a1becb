@@ -1,0 +1,10 @@
+#include "stm32f4xx.h"
+
+void blinkLed500ms(void);
+
+
+
+
+void blinkLed500ms(void){
+	GPIOC
+}

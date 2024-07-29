@@ -1,0 +1,8 @@
+"./Src/custom_systick.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Src/task100_pou.o"
+"./Src/task50_pou.o"
+"./Src/usart_lib.o"
+"./Startup/startup_stm32f411ceux.o"

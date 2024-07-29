@@ -1,0 +1,63 @@
+/*
+ * custom_systick.h
+ *
+ *  Created on: Jul 22, 2024
+ *      Author: bhadula.kishor
+ */
+
+#ifndef CUSTOM_SYSTICK_H_
+#define CUSTOM_SYSTICK_H_
+
+#include "stm32f411xe.h"
+#include "core_cm4.h"
+#include "stdbool.h"
+
+volatile uint8_t timingCounter = 1; // This counter will count until at max 2 seconds then will start again...
+
+volatile bool task50ms;
+volatile bool task100ms;
+
+void systick_init(void);
+void delayMs(uint16_t ms);
+
+
+void systick_init(uint16_t tickRateInMs){
+	volatile uint32_t reloadValue = ((SystemCoreClock/1000)*tickRateInMs) - 1;
+	SysTick->CTRL = 0;
+	SysTick->LOAD = reloadValue;
+
+	SysTick->CTRL |= SysTick_CTRL_CLKSOURCE_Msk;
+	SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
+	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+
+}
+
+void SysTick_Handler(void){
+
+	// Cycling counter for 2 seconds
+	timingCounter++;
+	if(timingCounter > 200){
+		timingCounter = 1;
+	}
+
+	if((timingCounter%5) == 0){
+		task50ms = true;
+	}
+	else{
+		task50ms = false;
+	}
+	if((timingCounter%10) == 0){
+		task100ms = true;
+	}else{
+		task100ms = false;
+	}
+
+	// Call the dedicated tasks here..
+	if(task50ms){
+
+	}
+	if(task100ms){
+
+	}
+}
+#endif /* CUSTOM_SYSTICK_H_ */

@@ -1,0 +1,12 @@
+../Src/usart_lib.c:25:6:usartx_init	1
+../Src/usart_lib.c:35:10:setDiv	1
+../Src/usart_lib.c:38:6:setBaudRate	1
+../Src/usart_lib.c:44:6:transmit_frame	7
+../Src/usart_lib.c:84:6:usart_interrupt_commonHandler	7
+../Src/usart_lib.c:117:6:reset_transmit_buffer	4
+../Src/usart_lib.c:134:16:read_data_usart	4
+../Src/usart_lib.c:154:16:read_data_usart_helper	4
+../Src/usart_lib.c:174:6:reset_receive_buffer	4
+../Src/usart_lib.c:189:6:USART1_IRQHandler	1
+../Src/usart_lib.c:193:6:USART2_IRQHandler	1
+../Src/usart_lib.c:197:6:USART6_IRQHandler	1

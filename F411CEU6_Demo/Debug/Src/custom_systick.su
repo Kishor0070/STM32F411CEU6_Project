@@ -1,0 +1,4 @@
+../Src/custom_systick.c:13:6:systick_init	16	static
+../Src/custom_systick.c:24:6:SysTick_Handler	8	static
+../Src/custom_systick.c:53:6:task_50ms	8	static
+../Src/custom_systick.c:57:6:task_100ms	8	static

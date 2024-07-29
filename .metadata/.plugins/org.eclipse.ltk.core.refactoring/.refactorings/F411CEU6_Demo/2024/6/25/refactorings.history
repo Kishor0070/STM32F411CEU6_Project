@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;F411CEU6_Demo/Src/STM32F411CEU6_PERIPHERALS&apos; to &apos;STM32F411CEU6_PERIPHERALS.h&apos;" description="Rename resource &apos;STM32F411CEU6_PERIPHERALS&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/STM32F411CEU6_PERIPHERALS" name="STM32F411CEU6_PERIPHERALS.h" stamp="1718699417833" updateReferences="true"/>
+</session>

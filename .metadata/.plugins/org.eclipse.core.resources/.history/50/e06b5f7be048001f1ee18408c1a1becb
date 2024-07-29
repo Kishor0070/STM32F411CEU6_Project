@@ -1,0 +1,18 @@
+/*
+ * task100_pou.c
+ *
+ *  Created on: Jul 23, 2024
+ *      Author: bhadula.kishor
+ */
+#include "task100.h"
+#include <stdint.h>
+volatile uint8_t task100Counter = 1;
+
+void transmit_over_usart2(void){
+
+}
+
+void utility_t100(void){
+
+}
+

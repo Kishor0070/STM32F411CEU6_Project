@@ -1,0 +1,28 @@
+#ifndef STM32F411CEU6_PERIPHERAL
+
+#define STM32F411CEU6_PERIPHERAL
+
+/* This library is designed just for STMF411 CEU6 Black Pill Board so, all the registers for
+STM32F411 series are not defined and not used.
+*/
+
+// BASE ADDRESS
+#define PERIPH_BASE										(0x40000000UL)
+#define APB1_BASE										(PERIPH_BASE)
+#define AHB1_OFFSET										(0x00020000UL)
+#define AHB1_BASE										(PERIPH_BASE + AHB1_OFFSET)
+#define GPIO_BASE_OFFSET								(0x00UL)
+#define GPIO_BASE										(AHB1_BASE + GPIO_BASE_OFFSET)
+// RCC AHB1 Peripheral Clock Enable Register
+#define RCC_OFFSET										(0x3800UL)
+#define RCC_BASE										(AHB1_BASE + RCC_OFFSET)
+#define AHB1EN_R_OFFSET									(0x30UL)
+#define RCC_AHB1EN_R									(RCC_BASE + AHB1EN_R_OFFSET)
+
+// RCC AHB1 Peripheral Clock Enable Register Bits
+#define RCC_AHB1ENR_GPIOA_MASK							(0x01UL<<0)
+#define RCC_AHB1ENR_GPIOB_MASK							(0x01UL<<1)
+#define RCC_AHB1ENR_GPIOC_MASK							(0x01UL<<2)
+
+
+#endif

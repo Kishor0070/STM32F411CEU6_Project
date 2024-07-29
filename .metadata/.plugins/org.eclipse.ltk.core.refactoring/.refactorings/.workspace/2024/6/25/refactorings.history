@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;F411CEU6_Demo/Src/STM32F411CEU6_PERIPHERALS.h&apos;" deleteContents="false" description="Delete resource &apos;F411CEU6_Demo/Src/STM32F411CEU6_PERIPHERALS.h&apos;" element1="/F411CEU6_Demo/Src/STM32F411CEU6_PERIPHERALS.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1718699423665"/>
+</session>

@@ -1,0 +1,54 @@
+
+#include "custom_systick.h"
+#include "stm32f411xe.h"
+
+#define SYS_CLOCK					16000000UL
+
+// By default SysTick is enabled for 10 milliseconds interrupt
+
+void systick_init(){
+	volatile uint32_t reloadValue = ((SYS_CLOCK/100)) - 1;
+	SysTick->CTRL = 0;
+	SysTick->LOAD = reloadValue;
+
+	SysTick->CTRL |= SysTick_CTRL_CLKSOURCE_Msk;
+	SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
+	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+
+}
+
+void SysTick_Handler(void){
+
+	// Cycling counter for 2 seconds
+	timingCounter++;
+	if(timingCounter > 200){
+		timingCounter = 1;
+	}
+
+	if((timingCounter%5) == 0){
+		task50ms = true;
+	}
+	else{
+		task50ms = false;
+	}
+	if((timingCounter%10) == 0){
+		task100ms = true;
+	}else{
+		task100ms = false;
+	}
+
+	// Call the dedicated tasks here..
+	if(task50ms){
+		task_50ms();
+	}
+	if(task100ms){
+		task_100ms();
+	}
+}
+
+void task_50ms(void){
+
+}
+void task_100ms(void){
+
+}
